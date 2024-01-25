@@ -58,6 +58,7 @@ addDoubt.addEventListener("submit", async (e) => {
       Name: addDoubt.yournames.value,
       Year: addDoubt.year.value,
       Subject: addDoubt.subject.value,
+      Text: addDoubt.yourtext.value,
       DocumentURL: downloadURL,
     });
 
