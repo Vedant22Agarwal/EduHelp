@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doubt Resolution</title>
+    <link rel="stylesheet" href="doubt.css">
+    <link rel="shortcut icon" href="do.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="img">
+        <img src="background copy.jpg" alt="">
+    </div>
+
+    <header>
+        <h1>Review Your Doubt</h1>
+    </header>
+
+    <section class="box-1"> 
+        <h2>All Doubts</h2>
+        <ul class="doubt-list">
+            <!-- <li class="doubt-item">
+                <h3>Subject :</h3>
+                <p>Asked by:User</p>
+                <p>Year:3</p>
+                <a href="#">Download</a>
+                <button class="solve-btn" onclick="showSolutionInterface()">Solve</button>
+            </li> -->
+        </ul>
+    </section>
+    <section class="after-solve" id="solutionContainer">
+        <form class="solution-hi-solution" onsubmit="submitSolution(event)">
+            <label for="your-name">Name</label>
+            <input type="text" placeholder="Name" name="yournames" id="your-name" required>
+            <label for="solutionInput">Give Your Solution:</label>
+            <textarea id="solutionInput" name="solutionInput" rows="4" placeholder="Write some text..."
+                style="resize: none;"></textarea>
+
+            <label for="fileInput">Upload a Solution File:</label>
+            <input type="file" id="fileInput" name="fileInput" class="image123">
+
+            <button id="submitButton" type="submit">Submit</button>
+            <button id="closeButton" type="button" onclick="hideSolutionInterface()">Close</button>
+            
+        </form>
+    </section>
+    <section class="box-2" id="reviewContainer">
+        <h2>Solution given</h2>
+        <ul class="review-list">
+            <!-- <li class="review-item">
+                <h3>Subject :</h3>
+                <p>Asked by:User</p>
+                <p>Year:3</p>
+                <a href="#">Download</a>
+                <button class="solve-btn" onclick="showSolutionInterface()">Solve</button>
+            </li> -->
+           
+        </ul>
+        <button id="closeButton" type="button" onclick="hideReviewInterface()" style="margin-top: 50px;">Close</button>
+    </section>
+
+
+
+
+
+    <script src="doubt.js" type="module"></script>
+    <script>function showSolutionInterface() {
+            document.getElementById("solutionInput").value = "";
+            document.getElementById("fileInput").value = "";
+
+            document.getElementById("solutionContainer").style.display = "block";
+        }
+
+        function hideSolutionInterface() {
+            document.getElementById("solutionContainer").style.display = "none";
+        }
+
+        function submitSolution(event) {
+            // Validate before submission
+            if (!isFormValid()) {
+                alert(" Give either text or document");
+                event.preventDefault();
+            }
+            // You can add additional submission logic here if needed
+        }
+
+        function isFormValid() {
+            // Check if either the text area or file input is not empty
+            const solutionText = document.getElementById("solutionInput").value;
+            const fileInput = document.getElementById("fileInput").value;
+
+            return solutionText.trim() !== '' || fileInput.trim() !== '';
+        }
+        function showReviewInterface(){
+            document.getElementById("reviewContainer").style.display = "block";
+        }
+        function hideReviewInterface() {
+            document.getElementById("reviewContainer").style.display = "none"
+        }
+        window.addEventListener('load',hideReviewInterface)
+        </script>
+
+</body>
+
+</html>

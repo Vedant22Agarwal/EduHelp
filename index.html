@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHelp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="3.png" type="image/x-icon">
+</head>
+
+<body> 
+    <header class="upper">
+        <video src="course-video.mp4" loop autoplay muted></video>
+        <div class="container">
+            <div class="nav">
+
+                <nav>
+                    <h1>EduHelp</h1> 
+
+                    <ul>
+                        <li><a href="#material">Material</a></li>
+                        <li><a href="#doubt">Doubt</a></li>
+                        <li><a href="#review">Review</a></li>
+                        <li class="list-1"><a href="/login.html" onclick="load()"><button class="login-button">Login</button></a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            <div class="text">
+                <div class="onvideo">
+                    <p>Hello Everyone</p>
+                    <h2>Welcome to EduHelp</h2>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="img">
+        <img src="background.jpg" alt="">
+    </div>
+    <section class="materials">
+        <div class="container">
+            <div class="box" id="material">
+                <h1>Material</h1>
+
+                <div class="photo">
+                    <a href="Material/material.html"><img src="123.jpg" alt=""></a>
+                    <div class="text">
+                        <a href="Material/material.html">
+                            <h2 class="materialheading">Material</h2>
+                        </a><br>
+                        <p class="materialparagraph">Here you can share material for various topics. Also you can share
+                            some material to your junior</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="doubt"> 
+        <div class="container">
+            <div class="box1" id="doubt">
+                <h1>Doubt</h1>
+            </div>
+        </div> 
+    </section>
+    <section class="box2" id="doubt">
+        <div class="container">
+            <div class="form">
+                <form class="doubt-hi-doubt">
+                    <h1>Ask a Doubt</h1>
+                    <div class="input">
+                        <input type="text" placeholder="Name" name="yournames" required>
+                        <input type="number" placeholder="Year" name="year" min="1" max="5" required>
+                        <input type="text" placeholder="Subject" name="subject" required>
+                    </div>
+                    <div class="textarea">
+                        <textarea placeholder="Add text to your doubt" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="image-upload">
+                        <input type="file" class="image123">
+                    </div> 
+                    <button class="btn" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="reviews">
+        <div class="container">
+            <div class="box" id="review">
+                <h1>Doubt Review</h1>
+                <div class="photo">
+                    <a href="Doubt/doubt.html"><img src="2.avif" alt=""></a>
+                    <div class="text">
+                        <a href="Doubt/doubt.html">
+                            <h2 class="reviewheading">Review</h2>
+                        </a><br>
+                        <p class="reviewparagraph">
+                            In this discerning realm, witness the unfolding discourse where doubt either contends with
+                            or capitulates to the veracity of your response.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script type="module" src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
